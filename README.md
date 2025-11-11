@@ -1,8 +1,20 @@
-# 💬 Surgio Chatbot – Conversational AI Application
+# 👋 Hi, I'm Navid Gholizadeh
+**AI & Machine Learning Enthusiast | Full-Stack Python Developer**
 
-**Project Link:** [https://surgio.streamlit.app/](https://surgio.streamlit.app/)  
-**GitHub Repository:** [Add your GitHub repo URL here]  
-**Contributor:** Navid Gholizadeh  
+Welcome to my portfolio! Here you'll find my featured project, **Surgio Chatbot**, along with links to my GitHub and professional profiles.  
+
+🔗 [Surgio Chatbot Demo](https://surgio.streamlit.app/)  
+🔗 [GitHub Repository](https://github.com/navidgh6767/surgio-chatbot)  
+🔗 [LinkedIn](https://www.linkedin.com/in/navidgholizadeh)
+
+---
+
+## 🚀 Navigate My Portfolio
+- [Artifact Overview](#-artifact-overview)
+- [Key Contributions](#-key-contributions)
+- [Technologies & Tools](#-technologies-and-tools)
+- [Reflection & Learnings](#-reflection-what-i-learned)
+- [Supporting Evidence](#-supporting-evidence)
 
 ---
 
@@ -32,6 +44,12 @@ This project was created to:
 - **Collaborated on ethical and responsible AI practices**, ensuring transparency and bias awareness.  
 - **Deployed and tested** the final product using Streamlit Cloud for public access.  
 
+### 💡 Additional Highlights
+- Maintained **response latency < 1s** for smooth user experience.  
+- Implemented **conversational memory** to maintain context across messages.  
+- Optimized API usage to handle **rate limits and concurrency** efficiently.  
+- Addressed **ethical AI considerations** including fairness, bias, and hallucination reduction.
+
 ---
 
 ## ⚙️ Technologies and Tools
@@ -55,6 +73,7 @@ Building the *Surgio Chatbot* deepened my understanding of **how AI can make com
 - Managing **AI system reliability and performance** under real-time constraints.  
 - Applying **ethical AI principles**, such as reducing hallucinations and ensuring user trust.  
 - Collaborating effectively in a **multi-disciplinary environment**, balancing technical and business objectives.  
+- Rapidly adapting to new frameworks, deployment workflows, and LLM innovations.
 
 This artifact reflects my ability to take AI theory and turn it into a functioning, real-world product — one that aligns innovation with impact.
 
@@ -75,19 +94,13 @@ This artifact reflects my ability to take AI theory and turn it into a functioni
 ## 🖼 Supporting Evidence
 
 ### Chatbot Interface Screenshots  
-*(Insert images here, e.g., `assets/chatbot_home.png`, `assets/chatbot_conversation.png`)*
+![Surgio Chatbot Home](assets/chatbot_home.png "Surgio Chatbot Home Screen")  
+![Surgio Chatbot Conversation](assets/chatbot_conversation.png "Example user interaction with Surgio Chatbot")  
 
-### Example Code Snippet
-```python
-import openai
-import streamlit as st
-
-st.title("Surgio Chatbot")
-
-user_input = st.text_input("You:")
-if user_input:
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": user_input}]
-    )
-    st.write(response.choices[0].message["content"])
+### System Architecture Diagram
+```mermaid
+flowchart LR
+    User -->|Message| StreamlitApp
+    StreamlitApp -->|API Request| OpenAI_API
+    OpenAI_API -->|Response| StreamlitApp
+    StreamlitApp -->|Reply| User
